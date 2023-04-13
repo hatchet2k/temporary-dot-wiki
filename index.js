@@ -1,32 +1,40 @@
-// var e = window.event;
+// attach cursor content to browser cursor
 
-// var posX = e.screenX;
-// var posY = e.screenY;
+const cursor = document.querySelector('.cursor');
 
-// document.Form1.posx.value = posX;
-// document.Form1.posy.value = posY;
+const moveCursor = (e)=> {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+   
+  cursor.style.transform = `translate3d(${mouseX-380}px, ${mouseY-195}px, 0)`;
+ 
+}
 
-// var t = setTimeout(mouse_position,100);
+window.addEventListener('mousemove', moveCursor)
 
-var d = document.getElementById('temp-type');
+// set portal logo svg height and width to browser dimensions
+
+var d = document.getElementById('temporary-portal-logo');
 
 function resize() {
-    d.style.height = window.innerHeight - 20 + 'px';
-    d.style.width = window.innerWidth - 20 + 'px';
+    d.style.height = window.innerHeight + 'px';
+    d.style.width = window.innerWidth + 'px';
   }
 resize();
 window.onresize = resize;
 
-const svg = document.getElementById('temp-type')
+// animate portal logo svg using warp.js
+
+const svg = document.getElementById('temporary-portal-logo')
 const warp = new Warp(svg)
-warp.interpolate(64)
+warp.interpolate(24)
 warp.transform(([ x, y ]) => [ x, y, y ])
 
-let offset = 0
+let offset = 1
 function animate()
 {
-    warp.transform(([ x, y, oy ]) => [ x, oy + 16 * Math.sin(x / 32 + offset), oy ])
-    offset += 0.1
+    warp.transform(([ x, y, oy ]) => [ x, oy + 4 * Math.sin(x / 32 + offset), oy ])
+    offset += 0.2
     requestAnimationFrame(animate)
 }
 animate()
