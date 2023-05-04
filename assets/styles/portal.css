@@ -1,5 +1,5 @@
 body {
-    background: url(to-heaven.gif);
+    background: url(../images/to-heaven.gif);
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center;
@@ -13,12 +13,12 @@ body {
 #temporary-portal-logo {
     position: static;
     mix-blend-mode: exclusion;
-    color: orangered;
+    color: orange;
 }
 
-.cursor::before {
+/* .cursor::before {
     position: absolute;
-    content: "TEMPORARY... \A RESEARCH, DEVELOPMENT, \A & PUBLISHING PRACTICE... \A\A CLICK ANYWHERE TO \A ENTER THE PORTAL... \A THANK U FOR VISITING...";
+    content: "ENTER THE PORTAL";
     white-space: pre-wrap;
 
     font-family: sans-serif;
@@ -27,5 +27,7 @@ body {
     line-height: 1em;
     word-spacing: -.075em;
 
-    color: springgreen;
+    color: black;
+    mix-blend-mode: exclusion;
     text-shadow: 0 0 20px blueviolet, 0 0 30px blueviolet, 0 0 40px blueviolet, 0 0 50px blueviolet;
+} */
