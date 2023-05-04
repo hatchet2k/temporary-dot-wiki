@@ -16,7 +16,5 @@
     "url": "https://github.com/hatchet2k/temporary-dot-wiki/issues"
   },
   "homepage": "https://github.com/hatchet2k/temporary-dot-wiki#readme",
-  "dependencies": {
-    "mustache": "^4.2.0"
-  }
+  "dependencies": {}
 }
